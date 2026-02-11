@@ -40,7 +40,7 @@ public class Program8 {
         }
 
         for (int i = 0; i < rows; i++){
-            for (int j=0; j < columns; j++){
+            for (int j = 0; j < columns; j++){
                 if (i == j){
                     sumdiagonal += matrix[i][j];
                 }
@@ -48,7 +48,6 @@ public class Program8 {
         }
 
         System.out.println("Sum of diagonal elements: " + sumdiagonal);
-
         sc.close();
     }
 }
