@@ -1,4 +1,5 @@
-/* Ques: Given an array , count number of elements having at least one element greater than itself.
+/* Ques: Given an array ,
+ count number of elements having at least one element greater than itself.
 
 Pseudo Code:
 1. Iterate and find the MAX of the array.
