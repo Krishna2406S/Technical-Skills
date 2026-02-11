@@ -5,21 +5,50 @@ eg:
 arr=[10,20,30,40,50]
 result--> 40
 */
+
 import java.util.Scanner;
+
 public class Program6{
     public static void main(String[] args) {
-        int i, max, secondMax;
-        Scanner sc =new Scanner(System.in);
 
-        System.out.print("Enter the size of the array: ");
-        int n=sc.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        int[] arr=new int[n];
-        System.out.println("Enter "+n+" elements:");
-        for(i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }    
-        
-        
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        int[] a = new int[n];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        if (n < 2) {
+            System.out.println("Second largest element not possible.");
+            return;
+        }
+
+        int largest, secondLargest;
+        if (a[0] > a[1]) {
+            largest = a[0];
+            secondLargest = a[1];
+        } else {
+            largest = a[1];
+            secondLargest = a[0];
+        }
+        for (int i = 2; i < n; i++) {
+
+            if (a[i] > largest) {
+                secondLargest = largest;
+                largest = a[i];
+            }
+            else if (a[i] > secondLargest && a[i] != largest) {
+                secondLargest = a[i];
+            }
+        }
+
+        System.out.println("Second largest number is: " + secondLargest);
+
+        sc.close();
     }
 }
