@@ -3,7 +3,12 @@ wap to find sum of frame elements of a matrix.
 
 Algorithms:
 1. Start
-
+2. Read number of rows and columns from user.
+3. create matrix using new int[rows][columns]
+4. Read elements of matrix from user using nested loop.
+5. Use nested loop to find sum of frame elements of matrix.
+6. Print the sum of frame elements.
+7. Stop
 
  */
 import java.util.Scanner;
